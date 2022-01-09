@@ -3,7 +3,7 @@
 /**
  * Name: Object Storage
  * Description: Add-on to use S3 object storage
- * Version: 0.0
+ * Version: 0.1
  * Author: Gidi Kroon
  * Status: Work-in-progress
  */
