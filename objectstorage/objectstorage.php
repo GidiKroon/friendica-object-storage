@@ -3,7 +3,7 @@
 /**
  * Name: Object Storage
  * Description: Add-on to use S3 object storage
- * Version: 0.1
+ * Version: 0.2
  * Author: Gidi Kroon
  * Status: Work-in-progress
  */
@@ -25,7 +25,7 @@ function objectstorage_uninstall()
 	DI::storageManager()->unregister(ObjectStorageBackend::class);
 }
 
-function objectstorage_storage_instance($a, &$data)
+function objectstorage_storage_instance(array &$data)
 {
 	if ($data['name'] == ObjectStorageBackend::getName()) {
 		$storageConfig = new ObjectStorageBackendConfig(DI::config(), DI::l10n());
@@ -33,7 +33,7 @@ function objectstorage_storage_instance($a, &$data)
 	}
 }
 
-function objectstorage_storage_config($a, &$data)
+function objectstorage_storage_config(array &$data)
 {
 	if ($data['name'] == ObjectStorageBackend::getName()) {
 		$data['storage_config'] = new ObjectStorageBackendConfig(DI::config(), DI::l10n());
