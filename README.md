@@ -27,3 +27,8 @@ This is work-in-progress.
 - No by-pass or redirect on the reverse proxy is possible,
 i.e. the media are always loaded by Friendica from the bucket instead of redirecting
 the user's browser to the bucket.
+
+Note that the Friendica project itself now provides and S3 storage add-on. It is preferred over
+this one. The differences are:
+- It uses a third party library instead of Amazon's library
+- It requires you to enter your login credentials, while this plugin doesn't even allow you to enter them
